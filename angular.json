@@ -98,7 +98,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/commands.txt"
+              "src/commands.txt",
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.scss"
