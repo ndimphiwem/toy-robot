@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { finalize, tap } from 'rxjs';
+import { tap } from 'rxjs';
 import { grid } from './config/constants';
 import { RobotService } from './robot/robot.service';
 import { Action } from './types/action';

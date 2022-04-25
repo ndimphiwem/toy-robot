@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Subject } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { BehaviorSubject, map } from 'rxjs';
+import { environment } from '../../environments/environment';
 import { axisMovements, grid, mapDirections, turnMovements } from '../config/constants';;
 import { Action } from '../types/action';
 import { Direction } from '../types/Direction';
