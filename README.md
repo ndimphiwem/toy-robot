@@ -16,7 +16,7 @@ Run `ng build` or `npm run build` to build the project. The build artifacts will
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` or `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## How to play with the Robot
 
