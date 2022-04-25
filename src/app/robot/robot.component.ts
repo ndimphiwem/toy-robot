@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RobotService } from './robot.service';
 
 @Component({
@@ -8,14 +8,8 @@ import { RobotService } from './robot.service';
   ]
 })
 
-export class RobotComponent implements OnInit {
+export class RobotComponent {
 
   constructor(public robot: RobotService) { }
-
-  ngOnInit(): void {
-    this.robot.robotState.subscribe(robot => {
-      console.log('robot', robot);
-    })
-  }
 
 }
