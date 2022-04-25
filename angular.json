@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/toy-robot",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,7 +29,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/commands.txt"
+              "src/commands.txt",
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.scss"
@@ -98,8 +99,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/commands.txt",
-              "src/_redirects"
+              "src/commands.txt"
             ],
             "styles": [
               "src/styles.scss"
