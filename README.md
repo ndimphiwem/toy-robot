@@ -20,5 +20,5 @@ Run `ng test` or `npm run test` to execute the unit tests via [Karma](https://ka
 
 ## How to play with the Robot
 
-- Located in the repo's src folder is a command.txt file that contains a list of commands that you can cycle through by pressing "Enter" on your keyboard.
+- Located in the repo's src folder is a command.txt file that contains a list of commands. The App will display these next to the table that the robot will be moving on. WWhen the app is open you can cycle through the instructions by pressing "Enter" on your keyboard. Each valid instruction activated will trigger an interaction from the Robot.
 - These instructions will either move the robot one unit in the direction it's facing, turn it left or right, place it within as specific coordinate set, or report the robot's current position and the direction it's facing.
