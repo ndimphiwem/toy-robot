@@ -6,11 +6,18 @@
         <div class="col col-auto p-0" *ngFor="let column of table?.columns; let columnIndex = index">
           <div class="border text-center" [style.width]="table?.cellSize+'px'" [style.height]="table?.cellSize+'px'">
             <span>
-              {{ row + ',' + column }}
+              {{ column + ',' + row }}
             </span>
+            <ng-container *ngIf="robot && (robot?.xPosition === column && robot?.yPosition === row)">
+              <div *ngTemplateOutlet="robotTemplate"></div>
+            </ng-container>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<ng-template #robotTemplate>
+  <app-robot></app-robot>
+</ng-template>

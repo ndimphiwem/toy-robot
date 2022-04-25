@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
-import { grid } from './config/grid';
+import { Component, OnInit } from '@angular/core';
+import { grid } from './config/constants';
+import { RobotService } from './robot/robot.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   table = {
     rows: [...Array(grid.height).keys()].reverse(),
     columns: [...Array(grid.length).keys()],
     cellSize: grid.cellSize
   };
+  robot: any;
 
-  isInTableBounds(xPosition: number, yPosition: number): boolean {
-    return xPosition >= 0 && xPosition < this.table.columns.length && yPosition >= 0 && yPosition < this.table.rows.length;
+  constructor(public robotService: RobotService) { }
+
+  ngOnInit(): void {
+    this.robotService.robotState.subscribe(robot => {
+      this.robot = robot;
+    });
   }
 }

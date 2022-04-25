@@ -1,0 +1,9 @@
+<p class="text-center">
+    <i class="fas fa-robot fa-2x text-black-50"></i>
+</p>
+<p class="text-center" [ngSwitch]="(robot?.robotState | async)?.facingDirection">
+    <i class="fas fa-arrow-down fa-2x text-black-50" *ngSwitchCase="'SOUTH'"></i>
+    <i class="fas fa-arrow-left fa-2x text-black-50" *ngSwitchCase="'WEST'"></i>
+    <i class="fas fa-arrow-right fa-2x text-black-50" *ngSwitchCase="'EAST'"></i>
+    <i class="fas fa-arrow-up fa-2x text-black-50" *ngSwitchCase="'NORTH'"></i>
+</p>
