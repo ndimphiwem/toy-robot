@@ -1,6 +1,7 @@
-<div class="container">
-  <h1>Toy robot</h1>
-  <div class="row">
+<div class="container py-3">
+  <h1 class="mb-2">Toy robot</h1>
+  <h5 class="mb-2 font-weight-bold">Press "Enter" to cycle through the robot's instructions</h5>
+  <div class="row align-items-start">
     <div class="col col-auto shadow shadow-5 border-r">
       <div class="row" *ngFor="let row of table?.rows; let rowIndex = index;">
         <div class="col col-auto p-0" *ngFor="let column of table?.columns; let columnIndex = index">
@@ -14,6 +15,16 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="col" *ngIf="instructions?.length > 0">
+      <p *ngFor="let instruction of instructions; let i = index" class="fw-normal" class="mb-1" [class.font-weight-bold]="activeInstrunctionIndex === i">
+        {{ instruction }}
+      </p>
+    </div>
+    <div class="col-12 mt-2" *ngIf="robot?.report">
+      <h2 class="mb-0 font-weight-bold">
+        {{ robot?.xPosition + ',' + robot?.yPosition + ',' + robot?.facingDirection}}
+      </h2>
     </div>
   </div>
 </div>
